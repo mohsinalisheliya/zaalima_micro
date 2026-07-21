@@ -1,3 +1,4 @@
+# This file is used to specify the dependencies for the project.
 fastapi==0.109.2
 uvicorn[standard]==0.27.1
 boto3==1.34.34
