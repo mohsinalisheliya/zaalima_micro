@@ -23,3 +23,11 @@ def generate_presigned_url(object_name: str):
         aws_secret_access_key=settings.AWS_SECRET_ACCESS_KEY,
         region_name=settings.AWS_REGION
     )
+
+def check_file_exists(object_name: str) -> bool:
+    s3 = get_s3_client()
+    try:
+        s3.head_object(Bucket=settings.AWS_BUCKET_NAME, Key=object_name)
+        return True
+    except Exception:
+        return False
