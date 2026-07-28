@@ -1,10 +1,8 @@
-from app.core.redis_client import get_redis_client
-import json
-
-redis_db = get_redis_client()
+# Wrap getter in try-except
 def get_job_status(job_id: str) -> dict:
-    data = redis_db.get(f"job:{job_id}")
-    if data:
-        return json.loads(data)
-    return None
-
+    try:
+        data = redis_db.get(f"job:{job_id}")
+        return json.loads(data) if data else None
+    except Exception as e:
+        print(f"Redis Error: {e}")
+        return None
