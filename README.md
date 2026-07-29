@@ -18,7 +18,7 @@ An asynchronous, event-driven backend microservice designed to handle heavy medi
 * **Haana Farook** - API & Routes Developer
 * **Sidram** - Core Configuration & Middleware Developer
 * **Raghuwansan** - Cloud Infrastructure & Video Processing Developer
-* **Kamlesh** - Schemas, Utilities, & Image Processing Developer
+* **Kamalesh** - Schemas, Utilities, & Image Processing Developer
 
 ---
 
