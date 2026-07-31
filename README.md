@@ -31,8 +31,6 @@ Before running this project, ensure you have the following installed globally on
 
 ---
 
-# 🚀 Distributed Media Processing Microservice
-
 ## 💻 Running the Application Locally
 
 Open THREE separate terminal windows and run these commands:
