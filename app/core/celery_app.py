@@ -15,4 +15,9 @@ celery_app.conf.update(
     timezone="UTC",
     enable_utc=True,
     task_track_started=True,
+    task_acks_late=True,  # Don't acknowledge until task is fully complete
+    task_routes={
+        'process_video_task': {'queue': settings.CELERY_VIDEO_QUEUE},
+        'process_image_task': {'queue': settings.CELERY_IMAGE_QUEUE},
+    }
 )
