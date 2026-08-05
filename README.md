@@ -1,4 +1,4 @@
-# 🚀 Distributed Media Processing Microservice
+# 🚀 Distributed Media Processing Microservices
 
 An asynchronous, event-driven backend microservice designed to handle heavy media workloads. This system securely offloads CPU-intensive tasks (like image resizing and video transcoding) from the main web application to background workers, ensuring high performance and a non-blocking user experience.
 
