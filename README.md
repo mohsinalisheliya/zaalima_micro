@@ -33,7 +33,7 @@ Before running this project, ensure you have the following installed globally on
 
 ## 💻 Running the Application Locally
 
-Open THREE separate terminal windows and run these commands:
+Open FOUR separate terminal windows and run these commands:
 
 **Terminal 1 (Infrastructure):**
 `docker-compose up -d`
@@ -41,9 +41,13 @@ Open THREE separate terminal windows and run these commands:
 **Terminal 2 (FastAPI Server):**
 `uvicorn app.main:app --reload`
 
-**Terminal 3 (Celery Background Worker):**
-*Mac/Linux:* `celery -A app.core.celery_app.celery_app worker --loglevel=info`
-*Windows:* `celery -A app.core.celery_app.celery_app worker --loglevel=info --pool=solo`
+**Terminal 3 (Video Worker):**
+*Mac/Linux:* `celery -A app.core.celery_app.celery_app worker -Q video_processing --loglevel=info`
+*Windows:* `celery -A app.core.celery_app.celery_app worker -Q video_processing --loglevel=info --pool=solo`
+
+**Terminal 4 (Image Worker):**
+*Mac/Linux:* `celery -A app.core.celery_app.celery_app worker -Q image_processing --loglevel=info`
+*Windows:* `celery -A app.core.celery_app.celery_app worker -Q image_processing --loglevel=info --pool=solo`
 
 ---
 
