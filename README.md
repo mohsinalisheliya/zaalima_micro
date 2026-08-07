@@ -31,7 +31,7 @@ Before running this project, ensure you have the following installed globally on
 
 ---
 
-## 💻 Running the Application Locally
+💻 Running the Application Locally
 
 Open FOUR separate terminal windows and run these commands:
 
