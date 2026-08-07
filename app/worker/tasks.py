@@ -2,6 +2,7 @@ from app.core.celery_app import celery_app
 from app.services.cache import set_job_status, update_job_progress
 from app.services.aws_client import check_file_exists
 import time
+import random
 import logging
 
 logger = logging.getLogger(__name__)
@@ -16,6 +17,13 @@ def process_video_task(self, job_id: str, filename: str, task_type: str):
         return {"job_id": job_id, "status": "failed", "error": "File not found in S3"}
 
     set_job_status(job_id, "processing")
+
+    # --- SIMULATED NETWORK FAILURE (For Day 7 Retry Testing) ---
+    if random.random() < 0.3:
+        logger.error(f"[VIDEO QUEUE] Simulated network timeout for job {job_id}")
+        set_job_status(job_id, "failed", result_url="Network Timeout")
+        raise Exception("Simulated connection lost during video processing")
+    # -----------------------------------------------------------
 
     # Simulate heavy processing with progress updates
     for i in range(20, 101, 20):
