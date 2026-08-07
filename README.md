@@ -49,6 +49,11 @@ Open FOUR separate terminal windows and run these commands:
 *Mac/Linux:* `celery -A app.core.celery_app.celery_app worker -Q image_processing --loglevel=info`
 *Windows:* `celery -A app.core.celery_app.celery_app worker -Q image_processing --loglevel=info --pool=solo`
 
+**Terminal 5 (Celery Flower Monitor):**
+`celery -A app.core.celery_app.celery_app flower --port=5555`
+
+*Once Flower is running, open your browser and go to `http://localhost:5555` to visually monitor all active, pending, and failed queues.*
+
 ---
 
 ## 💻 Local Setup Instructions
