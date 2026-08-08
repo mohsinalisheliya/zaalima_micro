@@ -1,12 +1,21 @@
 import requests
 import time
-
 BASE_URL = "http://127.0.0.1:8000/api/v1"
-
-print("--- Submitting Multiple Jobs to the Queue ---")
-for i in range(1, 6):
-    payload = {"filename": f"video_{i}.mp4", "task_type": "compress"}
-    response = requests.post(f"{BASE_URL}/jobs", json=payload)
-    print(f"Job {i}:", response.json())
-    
-print("\n--- Check the Celery terminal! You should see it processing these one by one ---")
+print("--- 1. Submitting Video Job ---")
+response = requests.post(f"{BASE_URL}/jobs", json={"filename": "test_video.mp4", "task_type": "compress_video"})
+job_data = response.json()
+job_id = job_data["job_id"]
+print(f"Job Created: {job_id}")
+print("\n--- 2. Polling for Live Progress ---")
+while True:
+    status_response = requests.get(f"{BASE_URL}/jobs/{job_id}").json()
+    status = status_response.get("status")
+    progress = status_response.get("progress", 0)
+    print(f"Status: {status.upper()} | Progress: {progress}%")
+    if status == "completed":
+        print(f"✅ Success! Result URL: {status_response.get('result_url')}")
+        break
+    elif status == "failed":
+        print("❌ Job Failed (This might be Raghuwansan's simulated error!)")
+        break
+    time.sleep(1) # Poll every 1 second
