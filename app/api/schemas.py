@@ -5,4 +5,6 @@ class JobRequest(BaseModel):
 class JobStatusResponse(BaseModel):
     job_id: str
     status: str
+    progress: int = 0  # Default to 0%
     result_url: str | None = None
+
