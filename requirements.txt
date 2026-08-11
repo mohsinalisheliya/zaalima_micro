@@ -6,3 +6,5 @@ pydantic-settings==2.1.0
 redis==5.0.1
 celery==5.4.0
 flower==2.0.1
+# Add this at the bottom of your requirements.txt file
+pillow==10.2.0
