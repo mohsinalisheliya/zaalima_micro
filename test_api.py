@@ -16,6 +16,9 @@ while True:
         print(f"✅ Success! Result URL: {status_response.get('result_url')}")
         break
     elif status == "failed":
-        print("❌ Job Failed (This might be Raghuwansan's simulated error!)")
+        print("❌ Job Permanently Failed (Max retries exceeded).")
         break
+    elif status == "retrying":
+        print("⚠️ Network error detected. Worker is waiting 5 seconds to retry...")
+        
     time.sleep(1) # Poll every 1 second
