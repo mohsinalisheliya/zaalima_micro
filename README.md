@@ -34,6 +34,14 @@ Before running this project, ensure you have the following installed globally on
 3. **FFmpeg** (Required for video processing in Week 3)
 4. **Git**
 
+## 🎬 Video Processing
+Prerequisites (Week 3)
+
+To process videos, you must have FFmpeg installed globally on your system.
+
+* **Windows:** Download the FFmpeg essentials build, extract it, and add the `bin` folder to your global Windows System Environment Variables.
+* Do not attempt to install this inside your local Python environment; the core dependency must remain accessible via a global path.
+
 ---
 
 💻 Running the Application Locally
