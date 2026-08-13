@@ -12,7 +12,6 @@ An asynchronous, event-driven backend microservice designed to handle heavy medi
 * **Infrastructure:** Docker & Docker Compose
 
 ---
-
 ## �️ Fault Tolerance & Retries
 This system features automatic task retries. If a worker encounters a temporary network error (like an S3 timeout), it will not fail the job immediately. Instead, it will automatically wait 5 seconds and retry the task up to 3 times before marking it as permanently failed. Clients can poll the status endpoint and will see the status temporarily change to `"retrying"`.
 
