@@ -8,6 +8,8 @@ class Settings(BaseSettings):
     CELERY_RESULT_BACKEND: str = "redis://localhost:6379/0"
     CELERY_VIDEO_QUEUE: str = "video_processing"
     CELERY_IMAGE_QUEUE: str = "image_processing"
+    AWS_GET_EXPIRE_SECONDS: int = 86400  # Download link expires in 24 hours
+    WEBHOOK_TIMEOUT_SECONDS: int = 5
 
     class Config:
         env_file = ".env"
