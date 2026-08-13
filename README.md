@@ -21,7 +21,7 @@ This system features automatic task retries. If a worker encounters a temporary 
 * **Mohsin Ali** - Team Leader & Orchestrator
 * **Haana Farook** - API & Routes Developer
 * **Sidram** - Core Configuration & Middleware Developer
-* **Raghuwansan** - Cloud Infrastructure & Video Processing Developer
+* **Raghu Varshan** - Cloud Infrastructure & Video Processing Developer
 * **Kamalesh** - Schemas, Utilities, & Image Processing Developer
 
 ---
