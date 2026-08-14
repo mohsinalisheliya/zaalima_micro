@@ -64,6 +64,9 @@ Open FOUR separate terminal windows and run these commands:
 **Terminal 5 (Celery Flower Monitor):**
 `celery -A app.core.celery_app.celery_app flower --port=5555`
 
+**Terminal 6 (Celery Beat Scheduler):**
+`celery -A app.core.celery_app.celery_app beat --loglevel=info`
+
 *Once Flower is running, open your browser and go to `http://localhost:5555` to visually monitor all active, pending, and failed queues.*
 
 ---
