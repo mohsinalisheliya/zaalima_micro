@@ -4,6 +4,9 @@ from pydantic_settings import BaseSettings
 class Settings(BaseSettings):
     PROJECT_NAME: str = "Media Processing Service"
     AWS_REGION: str = "us-east-1"
+    AWS_ACCESS_KEY_ID: str = ""
+    AWS_SECRET_ACCESS_KEY: str = ""
+    AWS_BUCKET_NAME: str = "my-media-bucket"
     CELERY_BROKER_URL: str = "amqp://guest:guest@localhost:5672//"
     CELERY_RESULT_BACKEND: str = "redis://localhost:6379/0"
     CELERY_VIDEO_QUEUE: str = "video_processing"
