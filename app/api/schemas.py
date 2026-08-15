@@ -1,10 +1,12 @@
 from pydantic import BaseModel
+
 class JobRequest(BaseModel):
     filename: str
-    task_type: str  # e.g., 'compress_video', 'resize_image'
+    task_type: str
+    webhook_url: str | None = None
+
 class JobStatusResponse(BaseModel):
     job_id: str
     status: str
-    progress: int = 0  # Default to 0%
+    progress: int = 0
     result_url: str | None = None
-
