@@ -6,7 +6,7 @@ An asynchronous, event-driven backend microservice designed to handle heavy medi
 
 This project is fully containerized. You do not need to install FFmpeg or Python on your local machine to run it.
 
-**1. Create your environment file:**
+**1 Create your environment file:**
 
 Ensure you have a `.env` file in the root directory with your AWS keys:
 
