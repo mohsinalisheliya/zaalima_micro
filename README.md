@@ -2,7 +2,7 @@
 
 An asynchronous, event-driven backend microservice designed to handle heavy media workloads using FastAPI, Celery, RabbitMQ, Redis, and AWS S3.
 
-## 🛠️ Complete System Launch (One-Click)
+## 🛠️ Complete System Launch 
 
 This project is fully containerized. You do not need to install FFmpeg or Python on your local machine to run it.
 
