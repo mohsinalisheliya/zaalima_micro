@@ -8,3 +8,5 @@ celery==5.4.0
 flower==2.0.1
 # Add this at the bottom of your requirements.txt file
 pillow==10.2.0
+# ends
+#you have to just run cmd to install all the requirements of the software  
