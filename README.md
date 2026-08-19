@@ -1,4 +1,4 @@
-# Distributed Media Processing Microservice
+# Distributed Media Processing Microservice [zaalima Development]
 
 An asynchronous, event-driven backend microservice designed to handle heavy media workloads using FastAPI, Celery, RabbitMQ, Redis, and AWS S3.
 
