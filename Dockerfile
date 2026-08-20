@@ -1,4 +1,4 @@
-# Use an official lightweight Python image
+# Use an official and lightweight Python image
 FROM python:3.10-slim
 # Install FFmpeg globally inside the container for video processing
 RUN apt-get update && \
