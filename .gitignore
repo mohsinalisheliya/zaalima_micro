@@ -2,3 +2,4 @@ Plaintext
 __pycache__/
 *.pyc
 .env
+.env
