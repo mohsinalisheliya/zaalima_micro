@@ -9,7 +9,6 @@ This project is fully containerized. You do not need to install FFmpeg or Python
 **1 Create your environment file:**
 
 Ensure you have a `.env` file in the root directory with your AWS keys:
-
 ```env
 AWS_ACCESS_KEY_ID=your_key
 AWS_SECRET_ACCESS_KEY=your_secret
